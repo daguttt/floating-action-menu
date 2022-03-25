@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navigation {
+  width: 80px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: -20px 20px 50px rgba(31, 19, 19, 0.05);
+  transition: transform 500ms, width 500ms;
+}
+
+.navigation.active {
+  width: 400px;
+}
+
+/* Menu toggle - Hamburguer icon */
+
+#menu-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* To center the hambuguer icon */
+  padding: 0 22.5px;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+#menu-toggle:before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #333;
+  transform: translateY(-10px);
+  transition: transform 500ms;
+}
+
+#menu-toggle:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #333;
+  transform: translateY(10px);
+  /* Centered Line of the hamburguer icon */
+  box-shadow: 0 -10px #333;
+  transition: transform 500ms, box-shadow 500ms;
+}
+
+.navigation.active #menu-toggle:before {
+  transform: rotate(45deg);
+}
+
+.navigation.active #menu-toggle:after {
+  transform: rotate(-45deg);
+  box-shadow: none;
+}
+
+/* Profile */
+.profile {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  padding: 10px;
+}
+
+.profile .avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: width 500ms, height 500ms;
+}
+
+.profile .avatar img {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: top 500ms, width 500ms;
+}
+
+.navigation.active .profile .avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.navigation.active .profile .avatar img {
+  top: -40px;
+}
