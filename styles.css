@@ -56,10 +56,10 @@ body {
   position: absolute;
   width: 35px;
   height: 2px;
-  background-color: #333;
+  background-color: #333333;
   transform: translateY(10px);
   /* Centered Line of the hamburguer icon */
-  box-shadow: 0 -10px #333;
+  box-shadow: 0 -10px #333333;
   transition: transform 500ms, box-shadow 500ms;
 }
 
