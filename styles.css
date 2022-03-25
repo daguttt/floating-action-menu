@@ -79,6 +79,7 @@ body {
   display: grid;
   place-content: center;
   padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .profile .avatar {
@@ -106,4 +107,49 @@ body {
 
 .navigation.active .profile .avatar img {
   top: -40px;
+}
+
+/* Menu Links */
+.menu {
+  padding: 10px;
+  transition: padding 500ms;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.navigation.active .menu {
+  padding: 10px 20px;
+}
+
+.menu li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #111111;
+}
+
+.menu li a:hover {
+  background-color: #0084ff;
+  color: #ffffff;
+}
+
+.menu li a .icon {
+  position: relative;
+  display: grid;
+  place-content: center;
+  height: 60px;
+  min-width: 60px;
+  font-size: 1.25rem;
+}
+
+.menu li a .text {
+  display: grid;
+  place-content: center;
+  margin-left: 10px;
 }
